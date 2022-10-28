@@ -123,31 +123,36 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
 /* end of reset css */
-.top h1 {
+.title-head {
   margin: 0%;
   letter-spacing: 0.4em;
   font-size: 40px;
   text-align: left;
   background-image: url(./olive.jpeg);
+
   color: white;
   padding: 5%;
   text-shadow: 8px 4px 4px #0d0d0c;
 }
+.nav {
+  display: flex;
+}
+
+.top ul,
+li {
+  display: flex;
+  margin: 0;
+  padding: 2.5em;
+  justify-content: space-evenly;
+}
 .top li {
   list-style: none;
-
-  display: inline-block;
 }
 .top li a {
   color: black;
 }
-.top ul {
-  text-align: right;
-  margin: 3%;
-  word-spacing: 30px;
-}
-
 .Jamie-quote {
   text-align: center;
 }
@@ -173,7 +178,7 @@ h1::before {
   inset: 0 0 0 0;
   background: rgb(177, 201, 167);
   z-index: -1;
-  transition: transform 0.3s ease;
+  transition: transform 0.8s ease-in;
 }
 /*end of this cool effect for h1s */
 
@@ -307,6 +312,9 @@ h1::before {
 
 .card-media {
   float: right;
+  width: 100%;
+  object-fit: cover;
+  height: 20em;
 }
 
 .card-shadow {
@@ -345,12 +353,12 @@ h1::before {
 }
 .footer {
   display: flex;
+  position: relative;
   height: 50%;
   background-color: rgb(189, 209, 182);
 }
 .section {
-  display: inline-block;
-  margin: 7% 8%;
+  margin: 2% 8%;
 }
 .section a {
   color: #0d0d0c;
@@ -548,6 +556,8 @@ textarea {
 #form_button:hover {
   background: #474544;
   color: #f2f3eb;
+  transition: 1s;
+  transform: scaleX(0.8);
 }
 /*end of contact form */
 
@@ -605,8 +615,7 @@ textarea {
   display: table;
 }
 .btn0 {
-  margin-top: 60%;
-  float: right;
+  position: absolute;
   background-color: rgb(189, 209, 182);
   bottom: 3rem;
   right: 3rem;
@@ -618,7 +627,7 @@ textarea {
   font-family: "Arial";
   align-items: center;
   justify-content: center;
-  margin-bottom: -12rem;
+
   transition: margin-bottom 0.2s;
 }
 
@@ -626,18 +635,24 @@ textarea {
   .blocke {
     width: 100%;
   }
+  .top ul {
+    flex-direction: column;
+  }
 
   /*media for contact form */
 
   #container {
-    margin: 20px auto;
-    width: 95%;
+    margin: 0px auto;
+    width: 75%;
   }
 
   h1 {
     font-size: 26px;
   }
-
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
   .underline {
     width: 68px;
   }
@@ -666,16 +681,21 @@ textarea {
     font-size: 0.875em;
     /*end of media for contact form */
   }
+  .card {
+    padding: 30px;
+  }
   .card-body {
-    position: sticky;
+    display: flex;
+    flex-direction: column;
     top: var(--space-sm);
     transform-origin: center top;
+    width: 249px;
   }
   .card-container {
     display: block;
   }
   .section {
-    margin: 12% 1%;
+    margin: 12% 0%;
   }
   .blocke {
     display: none;
@@ -694,5 +714,11 @@ textarea {
   }
   .message {
     font-size: 15px;
+  }
+  .popup {
+    width: 200px;
+  }
+  .btn0 {
+    display: none;
   }
 }
